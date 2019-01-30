@@ -6,30 +6,18 @@ namespace Oefeningen_csharp
     {
         static void Main(string[] args)
         {
-            //Kleuren instellen
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.Clear();
-
             //Declaratie van de variabelen
-            int intGetal1, intGetal2, intSom;
+            double dblCelsius, dblFahrenheit;
 
-            //De 2 getallen opvragen
-            Console.Write("Geef getal1: ");
-            intGetal1 = Convert.ToInt16(Console.ReadLine());
-
-            Console.Write("Geef getal2: ");
-            intGetal2 = Convert.ToInt16(Console.ReadLine());
+            //Graden in Celsius opvragen
+            Console.Write("Geef graden in Celsius: ");
+            dblCelsius = Convert.ToInt16(Console.ReadLine());
 
             //De som berekenen
-            intSom = intGetal1 + intGetal2;
-
-            //Kleuren instellen
-            Console.BackgroundColor = ConsoleColor.Gray;
-            Console.ForegroundColor = ConsoleColor.Red;
+            dblFahrenheit = (9.00/5.00) * dblCelsius + 32.00;
 
             //Het resultaat weergeven in de console
-            Console.WriteLine("De som bedraagt " + intSom.ToString());
+            Console.WriteLine("Een temperatuur van " + dblCelsius.ToString() + " graden Celsius komt overeen met " + dblFahrenheit.ToString() + " graden Fahrenheit.");
             Console.ReadLine();
         }
     }
