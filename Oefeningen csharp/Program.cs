@@ -7,17 +7,17 @@ namespace Oefeningen_csharp
         static void Main(string[] args)
         {
             //Declaratie van de variabelen
-            double dblCelsius, dblFahrenheit;
+            double dblEur, dblUSD;
 
-            //Graden in Celsius opvragen
-            Console.Write("Geef graden in Celsius: ");
-            dblCelsius = Convert.ToInt16(Console.ReadLine());
+            //Bedrag in euro's opvragen
+            Console.Write("Geef bedrag in euro's: ");
+            dblEur = Convert.ToInt16(Console.ReadLine());
 
             //De som berekenen
-            dblFahrenheit = (9.00/5.00) * dblCelsius + 32.00;
+            dblUSD = dblEur * 1.2231;
 
             //Het resultaat weergeven in de console
-            Console.WriteLine("Een temperatuur van " + dblCelsius.ToString() + " graden Celsius komt overeen met " + dblFahrenheit.ToString() + " graden Fahrenheit.");
+            Console.WriteLine(dblEur.ToString() + " EUR is gelijk aan " + dblUSD.ToString() + " USD.");
             Console.ReadLine();
         }
     }
