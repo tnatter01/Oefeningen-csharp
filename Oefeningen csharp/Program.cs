@@ -6,7 +6,9 @@ namespace Oefeningen_csharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hallo Wereld!");
+            Console.WriteLine("Druk op ENTER om de console af te sluiten…");
+            Console.ReadLine();
         }
     }
 }
