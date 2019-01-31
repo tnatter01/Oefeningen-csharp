@@ -7,17 +7,17 @@ namespace Oefeningen_csharp
         static void Main(string[] args)
         {
             //Declaratie van de variabelen
-            double dblEur, dblUSD;
+            double dblEclBTW, dblInclBTW;
 
             //Bedrag in euro's opvragen
             Console.Write("Geef bedrag in euro's: ");
-            dblEur = Convert.ToInt16(Console.ReadLine());
+            dblEclBTW = Convert.ToInt16(Console.ReadLine());
 
             //De som berekenen
-            dblUSD = dblEur * 1.2231;
+            dblInclBTW = dblEclBTW * 1.21;
 
             //Het resultaat weergeven in de console
-            Console.WriteLine(dblEur.ToString() + " EUR is gelijk aan " + dblUSD.ToString() + " USD.");
+            Console.WriteLine("De prijs incl. BTW bedraagt " + dblInclBTW.ToString() + ".");
             Console.ReadLine();
         }
     }
