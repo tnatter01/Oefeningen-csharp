@@ -7,26 +7,18 @@ namespace Oefeningen_csharp
         static void Main(string[] args)
         {
             //Declaratie van de variabelen
-            int intAantalSchoenen;
-            double dblPrijs;
-            const double cdblPrijs = 100.00;
+            double dblAantalRatten, dblJaren, dblGroeiPercentage;
+            dblAantalRatten = 2000000;
+            dblJaren = 0;
+            dblGroeiPercentage = 1.15;
 
-            //Opvragen aantal schoenen
-            Console.Write("Hoeveel schoenen wil je kopen: ");
-            intAantalSchoenen = Convert.ToInt16(Console.ReadLine());
+            while (dblAantalRatten < 10000000)
+            {
+                dblAantalRatten = dblAantalRatten * dblGroeiPercentage;
+                dblJaren++;
+            } 
 
-            //Het resultaat weergeven in de console
-            Console.WriteLine();
-            if(intAantalSchoenen >= 2)
-            {
-                dblPrijs = ((cdblPrijs * intAantalSchoenen) / 100 * 75);
-                Console.Write("Prijs: €" + Math.Round(dblPrijs, 2).ToString());
-            }
-            else
-            {
-                dblPrijs = (cdblPrijs * intAantalSchoenen);
-                Console.Write("Prijs: €" + Math.Round(dblPrijs, 2).ToString());
-            }
+            Console.Write("Na " + dblJaren.ToString() + " jaren zijn er 10.000.000 ratten in New York.");
             Console.ReadLine();
         }
     }
