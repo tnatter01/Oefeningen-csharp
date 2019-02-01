@@ -7,21 +7,22 @@ namespace Oefeningen_csharp
         static void Main(string[] args)
         {
             //Declaratie van de variabelen
-            double dblHoekA, dblHoekC, dblAfstandAB;
-            const double cdblAfstandAC = 10;
+            int intLeeftijd;
 
             //Opvragen hoeken A en C
-            Console.Write("De grootte van hoek A (in graden) =  ");
-            dblHoekA = Convert.ToDouble(Console.ReadLine());
-            Console.Write("De grootte van hoek C (in graden) =  ");
-            dblHoekC = Convert.ToDouble(Console.ReadLine());
-
-            //Afstand AB Berkenen
-            dblAfstandAB = (cdblAfstandAC * Math.Sin(dblHoekC * Math.PI / 180)) / (Math.Sin((dblHoekA * Math.PI / 180) + (dblHoekC * Math.PI / 180)));
+            Console.Write("Wat is je leeftijd: ");
+            intLeeftijd = Convert.ToInt16(Console.ReadLine());
 
             //Het resultaat weergeven in de console
             Console.WriteLine();
-            Console.WriteLine("De afstand AB = " + Math.Round(dblAfstandAB,1).ToString() + " meter.");
+            if(intLeeftijd >= 18)
+            {
+                Console.WriteLine("Je bent " + intLeeftijd + " jaar oud. Je mag deelnemen aan de spelen van de Nationale Loterij.");
+            }
+            else
+            {
+                Console.WriteLine("Om deel te nemen aan de spelen van de Nationale Loterij moet je minimum 18 jaar oud zijn.");
+            }
             Console.ReadLine();
         }
     }
