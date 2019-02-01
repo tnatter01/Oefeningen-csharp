@@ -6,12 +6,19 @@ namespace Oefeningen_csharp
     {
         static void Main(string[] args)
         {
-            int i;
-            for(i=0; i<5; i++)
-                {
-                Console.Write("\nProgrammeren in c# is leuk!");
+            int x, y, z, i;
+            x = 0;
+            y = 1;
+            for (i = 0; i <= 10; i++)
+            {
+                z = x + y;
+                Console.WriteLine(z);
+                x = y;
+                y = z;
             }
             Console.ReadLine();
         }
     }
-}
+
+        }
+    
