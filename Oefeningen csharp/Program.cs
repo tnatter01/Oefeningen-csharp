@@ -6,19 +6,11 @@ namespace Oefeningen_csharp
     {
         static void Main(string[] args)
         {
-            //Declaratie van de variabelen
-            double dblAantalRatten, dblJaren, dblGroeiPercentage;
-            dblAantalRatten = 2000000;
-            dblJaren = 0;
-            dblGroeiPercentage = 1.15;
-
-            while (dblAantalRatten < 10000000)
-            {
-                dblAantalRatten = dblAantalRatten * dblGroeiPercentage;
-                dblJaren++;
-            } 
-
-            Console.Write("Na " + dblJaren.ToString() + " jaren zijn er 10.000.000 ratten in New York.");
+            int i;
+            for(i=0; i<5; i++)
+                {
+                Console.Write("\nProgrammeren in c# is leuk!");
+            }
             Console.ReadLine();
         }
     }
