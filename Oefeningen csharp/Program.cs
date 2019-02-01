@@ -7,21 +7,25 @@ namespace Oefeningen_csharp
         static void Main(string[] args)
         {
             //Declaratie van de variabelen
-            int intLeeftijd;
+            int intAantalSchoenen;
+            double dblPrijs;
+            const double cdblPrijs = 100.00;
 
-            //Opvragen hoeken A en C
-            Console.Write("Wat is je leeftijd: ");
-            intLeeftijd = Convert.ToInt16(Console.ReadLine());
+            //Opvragen aantal schoenen
+            Console.Write("Hoeveel schoenen wil je kopen: ");
+            intAantalSchoenen = Convert.ToInt16(Console.ReadLine());
 
             //Het resultaat weergeven in de console
             Console.WriteLine();
-            if(intLeeftijd >= 18)
+            if(intAantalSchoenen >= 2)
             {
-                Console.WriteLine("Je bent " + intLeeftijd + " jaar oud. Je mag deelnemen aan de spelen van de Nationale Loterij.");
+                dblPrijs = ((cdblPrijs * intAantalSchoenen) / 100 * 75);
+                Console.Write("Prijs: €" + Math.Round(dblPrijs, 2).ToString());
             }
             else
             {
-                Console.WriteLine("Om deel te nemen aan de spelen van de Nationale Loterij moet je minimum 18 jaar oud zijn.");
+                dblPrijs = (cdblPrijs * intAantalSchoenen);
+                Console.Write("Prijs: €" + Math.Round(dblPrijs, 2).ToString());
             }
             Console.ReadLine();
         }
